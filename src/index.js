@@ -1,15 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Header from './component/Header';
+import Header from './component/Nav';
+import ReactDOM from 'react-dom/client';
+import Login from './component/Login';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Sign from './component/Sign';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
+
   <div  >
    <Header/>
     <App />
+    
  
   </div>
 );

@@ -4,7 +4,7 @@ const Login = () => {
   return (
     <div className=' flex justify-center'>
     <form action="" className='flex justify-center flex-col gap-5  mt-5  w-54'>
-    <p className='text-cyan-200 items-center flex justify-center text-4xl'>Sign up </p>
+    <p className='text-cyan-200 items-center flex justify-center text-4xl'>Login </p>
 
        
        <div>
@@ -31,7 +31,7 @@ const Login = () => {
              placeholder='password' />
        </div>
       
-       <p className='text-center my-2 text-cyan-100 '>Already have an account? <a href="/login" className='text-blue-700'>sign up </a></p>
+       <p className='text-center my-2 text-cyan-100 '>Already have an account? <a href="/" className='text-blue-700'>sign up </a></p>
      <div className='flex justify-center'>
        <button type='submit' className='   border-2 rounded-xl  p-2 border-slate-700 text-cyan-100 '>login </button>
      </div>

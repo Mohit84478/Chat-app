@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Sign = () => {
    return (
@@ -61,7 +62,7 @@ const Sign = () => {
                   type="password"
                   placeholder='again password' />
             </div>
-            <p className='text-center my-2 text-cyan-100 '>Already have an account? <a href="/login" className='text-blue-700'>login  </a></p>
+            <p className='text-center my-2 text-cyan-100 '>Already have an account? <Link to={"/login"} className='text-blue-700'>login  </Link></p>
           <div className='flex justify-center'>
             <button type='submit' className='   border-2 rounded-xl  p-2 border-slate-700 text-cyan-100 '>Sign up</button>
           </div>

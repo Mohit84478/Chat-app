@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link , useNavigate} from 'react-router-dom'
 
 const Sign = () => {
     const[data,setdata]=useState({
@@ -11,6 +11,7 @@ const Sign = () => {
       conformpassword:""
 
     })
+     const navigator=useNavigate()
     const onsubmithandel=async(e)=>{
          e.preventDefault();
          
@@ -21,6 +22,9 @@ const Sign = () => {
         },
         withCredentials: true
       });
+      if (response.request.statusText) {
+         navigator("login")
+      }
       console.log(response)
             } catch (error) {
                console.log(error)

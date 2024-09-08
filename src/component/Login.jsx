@@ -1,9 +1,33 @@
 import React from 'react'
 
 const Login = () => {
+   
+      const[logindata,setlogindata]=useState({
+        
+        username:"",
+        
+        password:""
+        
+  
+      })
+      const onsubmithandel=async(e)=>{
+           e.preventDefault();
+           
+              try {
+                 const response = await axios.post('http://localhost:8080/api/login', logindata, {
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          withCredentials: true
+        });
+        console.log(response)
+              } catch (error) {
+                 console.log(error)
+              }
+            }   
   return (
     <div className=' flex justify-center'>
-    <form action="" className='flex justify-center flex-col gap-5  mt-5  w-54'>
+    <form  onSubmit={onsubmithandel} action="" className='flex justify-center flex-col gap-5  mt-5  w-54'>
     <p className='text-cyan-200 items-center flex justify-center text-4xl'>Login </p>
 
        
@@ -12,6 +36,8 @@ const Login = () => {
              <span className='text-base label-text text-cyan-100 '>user name</span>
           </label>
           <input
+          value={data.username}
+          onChange={(e)=>(setlogindata({...data,username:e.target.value}))}
 
 
              className='w-full input input-bordered h-10 border-2 border-black rounded-md'
@@ -25,6 +51,8 @@ const Login = () => {
           </label>
           <input
 
+value={data.password}
+            onChange={(e)=>(setlogindata({...data,password:e.target.value}))}
 
              className='w-full input input-bordered h-10 border-2 border-black rounded-md'
              type="password"

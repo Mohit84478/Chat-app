@@ -1,5 +1,5 @@
 import React from 'react'
-import  { Link } from 'react-router-dom';
+
 function header() {
     return (
         <div className='flex justify-between bg-black text-cyan-100 h-16 items-center  '>

@@ -1,7 +1,9 @@
 import React from 'react'
+import { Usegetmsg } from '../hook/Usegetmsg'
 
 
 export const Msgbar = () => {
+    Usegetmsg()
   return (
     <div className='border-2 w-[70vh]  justify-between'>
 
@@ -15,42 +17,15 @@ export const Msgbar = () => {
                         <h1>name1</h1>
                         <img src="hey.jpg" className='h-10' alt=" heelo" />
                     </div>
-                    <div className='flex justify-start gap-5  w-full items-center bg-cyan-500'>
-                        <img src="hey.jpg" className='h-10' alt=" heelo" />
-                        <h1>name1</h1>
-                    </div>
-                    <div className='flex justify-end gap-5  w-full items-center bg-cyan-500'>
-                        <h1>name1</h1>
-                        <img src="hey.jpg" className='h-10' alt=" heelo" />
-                    </div>
-                    <div className='flex justify-start gap-5  w-full items-center bg-cyan-500'>
-                        <img src="hey.jpg" className='h-10' alt=" heelo" />
-                        <h1>name1</h1>
-                    </div>
-                    <div className='flex justify-end gap-5  w-full items-center bg-cyan-500'>
-                        <h1>name1</h1>
-                        <img src="hey.jpg" className='h-10' alt=" heelo" />
-                    </div>
-                    <div className='flex justify-start gap-5  w-full items-center bg-cyan-500'>
-                        <img src="hey.jpg" className='h-10' alt=" heelo" />
-                        <h1>name1</h1>
-                    </div>
-                    <div className='flex justify-end gap-5  w-full items-center bg-cyan-500'>
-                        <h1>name1</h1>
-                        <img src="hey.jpg" className='h-10' alt=" heelo" />
-                    </div>
-                    <div className='flex justify-start gap-5  w-full items-center bg-cyan-500'>
-                        <img src="hey.jpg" className='h-10' alt=" heelo" />
-                        <h1>name1</h1>
-                    </div>
-                    <div className='flex justify-end gap-5  w-full items-center bg-cyan-500'>
-                        <h1>name1</h1>
-                        <img src="hey.jpg" className='h-10' alt=" heelo" />
-                    </div>
-                    <div className='flex justify-end gap-5  w-full items-center bg-cyan-500'>
-                        <h1>name1</h1>
-                        <img src="hey.jpg" className='h-10' alt=" heelo" />
-                    </div>
+                    
+                   
+                    
+                   
+                    
+                   
+                    
+                   
+                   
                     </div>
 
 

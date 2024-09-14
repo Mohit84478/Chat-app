@@ -1,40 +1,33 @@
 import React from 'react'
 import { Usegetmsg } from '../hook/Usegetmsg'
+import { useSelector } from 'react-redux'
+import { Showchat } from './Showchat'
+import { Username } from './Username'
+
 
 
 export const Msgbar = () => {
     Usegetmsg()
+    const messagechat=useSelector(store=>store.chatmsg.messagechat)
+    if (!messagechat) {
+        return <div>Loading...</div>;
+    }
+    
+
+    
+    console.log(messagechat)
   return (
-    <div className='border-2 w-[70vh]  justify-between'>
+    <div className='border-2 w-[70vh] h-[85vh]  justify-between gap-5 overflow-y-auto '>
 
-                    <div className='flex justify-start gap-7  w-full items-center '>
-                        <img src="hey.jpg" className='h-10' alt=" heelo" />
-                        <h1>name1</h1>
-                    </div>
-                    <div className=' h-[78vh] flex flex-col gap-4'>
+     <Username/>
+{   
+                    messagechat?.map((user, index) => (
+                        <Showchat key={user.id || index} user={user} />
+                    ))
+                }
 
-                    <div className='flex justify-end gap-5  w-full items-center bg-cyan-500'>
-                        <h1>name1</h1>
-                        <img src="hey.jpg" className='h-10' alt=" heelo" />
-                    </div>
+         
                     
-                   
-                    
-                   
-                    
-                   
-                    
-                   
-                   
-                    </div>
-
-
-
-
-                    <div className='flex '>
-                        <input type="text" name="" id="" className='w-full rounded-lg' />
-                        <button className='bg-green-600 pl-5 pr-5 rounded-xl'>send</button>
-                    </div>
                     </div>
   )
 }

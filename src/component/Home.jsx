@@ -4,6 +4,7 @@ import { Sidebar } from './Sidebar'
 import { Msgbar } from './Msgbar'
 import axios from 'axios'
 import {  useNavigate } from 'react-router-dom'
+import { Sendinput } from './Sendinput'
 
 const Home = () => {
     const navigate =useNavigate()
@@ -27,7 +28,7 @@ const Home = () => {
 
                     <Msgbar/>
                  
-
+                    <Sendinput/>
                 </div>
 
 

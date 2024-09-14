@@ -4,7 +4,8 @@ import { Navigate, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setauth } from '../redux/userslice'
 const Login = () => {
-   
+  
+  const disptach=useDispatch()
       const[data,setdata]=useState({
         
         username:"",
@@ -14,7 +15,6 @@ const Login = () => {
   
 
       })
-      const disptach=useDispatch()
        const navigator=useNavigate()
       const onsubmithandel=async(e)=>{
            e.preventDefault();
@@ -27,9 +27,9 @@ const Login = () => {
           withCredentials: true
         });
         if (response.request.statusText) {
+          disptach(setauth(response.data))
+          console.log(response.data)
          navigator("/home");
-         disptach(setauth(response.data))
-         console.log(response.data)
         }
         console.log(response)
               } catch (error) {

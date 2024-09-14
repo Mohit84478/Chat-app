@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import reducers from './userslice'; // Ensure the path is correct
-
+import msgreducer from './msgslice'
 const store = configureStore({
     reducer: {
-        user: reducers
+        user: reducers,
+        chatmsg:msgreducer
+
     }
 });
 

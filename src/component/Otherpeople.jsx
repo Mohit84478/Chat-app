@@ -8,6 +8,7 @@ export const Otherpeople = ({ user }) => {
   
    const selecteduser=(user)=>{
      dispatch(setselectuser(user))
+   
      
     }
    
